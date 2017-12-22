@@ -1,0 +1,44 @@
+<app-header> </app-header> 
+
+<div class="container">
+<h3> Send a new mail</h3>
+  <div class="row">
+    
+<form  #f="ngForm"
+(ngSubmit)="onSubmit(f)" >
+
+        <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate"  name="to" required ngModel   >
+          <label for="email">To</label> {{to}}
+        </div>
+      </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <input id="email2" value="aaaaa"type="email" class="validate"  name="from" required ngModel>
+          <label for="email">From</label>
+        </div>
+      </div>
+   
+      <div class="row">
+        <div class="input-field col s12">
+         <label for="last_name">Object</label>
+       <input id="last_name" type="text" class="validate" name="object" required ngModel>
+        </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" name="core" class="materialize-textarea" data-length="120" required ngModel></textarea>
+            <label for="textarea1">Enter you email</label>
+          </div>
+        </div>
+      <button class="btn waves-effect waves-light" type="submit"  [disabled]=!f.valid>Submit
+    <i class="material-icons right">send</i>
+  </button>
+    </form>
+  </div>
+</div>
+
+
+
+

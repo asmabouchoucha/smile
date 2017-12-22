@@ -1,0 +1,15 @@
+<app-header> </app-header>
+    <div class="container ">
+      <div class="collection">
+      <ng-container *ngFor="let i of mails"> 
+        <ng-container *ngIf= "i.sent == 1" >
+   
+    <a [routerLink]="['../maildetails',i.id]" class="collection-item">{{i.to}}</a>
+ 
+      </ng-container>
+      </ng-container>
+
+  </div>
+    </div>
+
+         

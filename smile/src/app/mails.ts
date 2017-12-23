@@ -10,7 +10,8 @@ export const mails: Mail[] = [
         from: 'asma@com',
         object: 'objeeeeet', 
         core:'ceci est le mail 1 ', 
-        sent:0
+        sent:0, 
+        opened:0
 
     },
 
@@ -21,7 +22,8 @@ export const mails: Mail[] = [
         from: 'from1@com',
         object: 'objeeeeet', 
         core:'ceci est le mail 2  ', 
-        sent:0
+        sent:0,
+        opened:0
     }, 
     
      {
@@ -31,7 +33,8 @@ export const mails: Mail[] = [
         from: 'from2@com',
         object: 'objeeeeet', 
         core:'ceci est le mail 3 ', 
-        sent:0
+        sent:0,
+        opened:0
     }, 
        {
      
@@ -40,7 +43,8 @@ export const mails: Mail[] = [
         from: 'asma@com',
         object: 'objeeeeet', 
         core:'ceci est le mail 1 ', 
-        sent:1
+        sent:1,
+        opened:0
     },
 
      {
@@ -50,7 +54,8 @@ export const mails: Mail[] = [
         from: 'from1@com',
         object: 'objeeeeet', 
         core:'ceci est le mail 2  ', 
-        sent:1
+        sent:1,
+        opened:0
     }, 
     
      {
@@ -60,7 +65,8 @@ export const mails: Mail[] = [
         from: 'from2@com',
         object: 'objeeeeet', 
         core:'ceci est le mail 3 ', 
-        sent:1
+        sent:1,
+        opened:0
     }
 
 

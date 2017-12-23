@@ -19,7 +19,11 @@ export class MailDetailsComponent implements OnInit {
       });
   this.from= this.mailService.getClient();
 
-   
   }
+
+
+  // delete(id) {
+  //   this.mailService.deleteMail(id); 
+  // }
 
 }

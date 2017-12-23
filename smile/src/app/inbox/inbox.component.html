@@ -1,14 +1,21 @@
 <app-header> </app-header>
-    <div class="container ">
+
+<div class="container ">
+  <h3>    Welcome {{ client }} </h3>
       <div class="collection">
       <ng-container *ngFor="let i of mails"> 
         <ng-container *ngIf= "i.sent == 0" >
    
-    <a [routerLink]="['../maildetails',i.id]" class="collection-item">
-     <!-- <ng-container *ngIf= "i.opened == 0" > -->
-      <span class="new badge"></span>{{i.to}}</a>
+    <a [routerLink]="['../maildetails',i.id]" (click)="openMail(i.id)" class="collection-item">
+       
+      <ng-container *ngIf= "i.opened == 0" > 
+      <span class="new badge"></span> </ng-container> 
+      {{i.to}}
+          </a>
+
+
         </ng-container>
-        <!-- </ng-container> -->
+   
       </ng-container>
 
   </div>

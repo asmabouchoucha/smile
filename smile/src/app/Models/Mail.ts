@@ -6,8 +6,8 @@ export class Mail {
         public to : string, 
         public object: string, 
         public core: string, 
-        public sent: number
-        // public opened: number, 
+        public sent: number,
+        public opened: number, 
 
     ) {}
 }

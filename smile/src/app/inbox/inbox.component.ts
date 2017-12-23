@@ -9,14 +9,21 @@ import { MailServerService } from "../mail-server.service";
 export class InboxComponent implements OnInit {
 
   mails; 
+  client; 
   constructor(private mailService: MailServerService) {
   //  console.log(this.mailService.getMails());
    }
 
   ngOnInit() {
-    this.mails=this.mailService.getMails(); 
-    console.log(this.mails)
+    this.mails=this.mailService.getMails();
+     
+    this.client=this.mailService.getClient(); 
+    
   }
+  openMail(index) {
+    this.mailService.openedMail(index) ; 
+  }
+
 
 
 }

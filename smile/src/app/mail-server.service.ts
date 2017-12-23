@@ -13,6 +13,7 @@ export class MailServerService {
 
   client;
 mails; 
+tab:Mail[]=mails; 
 cpt=3 ; 
   
   constructor(
@@ -30,14 +31,15 @@ cpt=3 ;
   }
 
   sendMail(form) {
-//     var mail= new Mail (30, 
-//     form.to,
-//     form.from, 
-//     form.object,
-//     form.core,1);
-//     this.mails.push ( mail
+    var length= this.tab.length; 
+    var mail= new Mail (length+1, 
+    form.to,
+    form.from, 
+    form.object,
+    form.core,1,0);
+    this.tab.push ( mail
       
-// ); 
+); 
 
    this.cpt=this.cpt+1; 
   }
@@ -47,7 +49,7 @@ cpt=3 ;
   }
 
   getMails () {
-    return  mails;   
+    return  this.tab;   
   }
 
 
@@ -60,4 +62,27 @@ cpt=3 ;
      }
 }
   }
+   
+  public openedMail (id) {
+      for (let entry of this.tab) {
+     if (entry.id == id) {
+        var mail= new Mail (entry.id, 
+    entry.to,
+    entry.from, 
+    entry.object,
+    entry.core,0,1);
+    this.tab[entry.id-1]=mail; 
+ 
+     }
+}
+  }
+deleteMail (id) {
+     for (let entry of this.tab) {
+     if (entry.id == id) {
+     this.tab.splice(id, 1);
+  }
+}
+
+}
+
 }
